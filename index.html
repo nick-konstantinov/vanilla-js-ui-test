@@ -6,6 +6,7 @@
   <title>Vanilla JS UI Test</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/header.js" defer></script>
+  <script src="js/showcase.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -51,5 +52,31 @@
       </div>
     </div>
   </header>
+
+  <main>
+    <section class="showcase">
+      <div class="container">
+      <h2 class="showcase__title">Витрина</h2>
+
+      <div class="showcase__controls">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Поиск..."
+          class="showcase__search"
+        />
+
+        <select id="categorySelect" class="showcase__select">
+          <option value="Все">Все</option>
+          <option value="Брендинг">Брендинг</option>
+          <option value="Веб-дизайн">Веб-дизайн</option>
+          <option value="Иллюстрации">Иллюстрации</option>
+        </select>
+      </div>
+
+      <div id="showcaseGrid" class="showcase__grid"></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

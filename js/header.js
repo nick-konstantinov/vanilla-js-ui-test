@@ -1,23 +1,36 @@
-// Hide the middle header line
+// Hide/Show the middle header line
 const headerMiddle = document.querySelector('.header__middle');
+const middleContent = headerMiddle.querySelector('.header__middle-content');
+
 let lastScrollY = window.scrollY;
 let ticking = false;
+
+function updateMiddleHeight() {
+  headerMiddle.style.height = middleContent.offsetHeight + 'px';
+}
+
+window.addEventListener('resize', updateMiddleHeight);
+
+updateMiddleHeight();
 
 window.addEventListener('scroll', () => {
   if (!ticking) {
     window.requestAnimationFrame(() => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll > lastScrollY + 5 && currentScroll > 50) {
+      const delta = currentScroll - lastScrollY;
+
+      if (delta > 10 && currentScroll > 50) {
         headerMiddle.classList.add('shrink');
-      } else if (currentScroll < lastScrollY - 5) {
+        headerMiddle.style.height = '0';
+      } else if (delta < -10) {
         headerMiddle.classList.remove('shrink');
+        updateMiddleHeight();
       }
 
       lastScrollY = currentScroll;
       ticking = false;
     });
-
     ticking = true;
   }
 });

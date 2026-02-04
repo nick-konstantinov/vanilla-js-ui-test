@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/header.js" defer></script>
   <script src="js/showcase.js" defer></script>
+  <script src="js/modal.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -37,9 +38,10 @@
 
           <nav class="header__menu">
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#" class="header__menu-item">Главная</a></li>
+              <li><a href="#" class="header__menu-item">Каталог</a></li>
+              <li><a href="#" class="header__menu-item">Контакты</a></li>
+              <li><button id="contactBtn" class="header__menu-item" type="button">Связаться</button></li>
             </ul>
           </nav>
 
@@ -62,7 +64,7 @@
         <input
           id="searchInput"
           type="text"
-          placeholder="Поиск..."
+          placeholder="Поиск"
           class="showcase__search"
         />
 
@@ -79,12 +81,22 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="footer__inner">
         <a class="footer__link" href="https://github.com/nick-konstantinov">GitHub</a>
       </div>
     </div>
   </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal__overlay"></div>
+
+    <div class="modal__window">
+      <button class="modal__close">&times;</button>
+
+      <div class="modal__content"></div>
+    </div>
+  </div>
 </body>
 </html>

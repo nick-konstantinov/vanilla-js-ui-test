@@ -38,7 +38,7 @@ window.addEventListener('scroll', () => {
 // Burger menu
 const burger = document.querySelector('.header__burger');
 const menu = document.querySelector('.header__menu');
-const menuLinks = menu.querySelectorAll('a');
+const menuLinks = menu.querySelectorAll('.header__menu-item');
 
 burger.addEventListener('click', (e) => {
   menu.classList.toggle('open');

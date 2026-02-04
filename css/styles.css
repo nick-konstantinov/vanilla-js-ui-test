@@ -82,7 +82,7 @@ p {
 }
 
 .header__top {
-  background: var(--header-bg, #222222);
+  background: #222222;
   color: var(--white-color, #ffffff);
   overflow: hidden;
   white-space: nowrap;
@@ -325,4 +325,20 @@ p {
   .showcase__grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
+}
+
+/* Footer */
+.footer {
+  padding: 1rem 0;
+  background-color: #cccccc
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link {
+  padding: 1rem 0.5rem;
 }

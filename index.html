@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanilla JS UI Test</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/header.js" defer></script>
 </head>
 <body>
+  <header class="header">
+    <div class="header__top">
+      <p class="header__top-promo">Акция: Бесплатная доставка при заказе от 100$!</p>
+    </div>
+
+    <div class="header__middle">
+      <div class="container">
+        <div class="header__middle-content">
+          <div class="header__middle-item">
+            <span>Телефон:</span>
+            <a href="tel:+1234567890">+1 234 567 890</a>
+          </div>
+
+          <div class="header__middle-item">
+            <span>Email:</span>
+            <a href="mailto:info@example.com">info@example.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container">
+        <div class="header__main-content">
+          <a href="#" class="logo">Logo</a>
+
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 </body>
 </html>
